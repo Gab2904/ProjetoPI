@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import { StyleSheet, KeyboardAvoidingView, View, Image, TextInput, TouchableOpacity, Text} from 'react-native';
 
-export default function App() {
+export default function Login(props) {
 
 	return (
 		<KeyboardAvoidingView style={styles.back}>
 
 			<View style={styles.logo}>
 			<Image
-			source={require('./assets/down.png')}
+			source={require('../assets/down.png')}
 			/>
 			</View>
 
@@ -27,8 +27,9 @@ export default function App() {
 				style={styles.input}
 				/>
 
-			<TouchableOpacity style={styles.btnSubmit}>
+			<TouchableOpacity style={styles.btnSubmit} onPress = {() => {props.navigation.navigate('Loja')}}>
 				<Text style={styles.submitText}>Acessar</Text>
+				
 			</TouchableOpacity>
 
 			<TouchableOpacity style={styles.btnRegister}>

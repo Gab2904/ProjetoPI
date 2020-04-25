@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import { StyleSheet, KeyboardAvoidingView, View, Image, TextInput, TouchableOpacity, Text} from 'react-native';
 
-export default function App() {
+export default function Loja(props) {
 
 	return (
 		<KeyboardAvoidingView style={styles.back}>
 
 			<View style={styles.logo}>
 			<Image
-			source={require('./assets/store.png')}
+			source={require('../assets/store.png')}
 			/>
 			</View>
 
@@ -51,7 +51,7 @@ export default function App() {
 				style={styles.input}
 				/>
 
-			<TouchableOpacity style={styles.btnSubmit}>
+			<TouchableOpacity style={styles.btnSubmit} onPress = {() => {props.navigation.navigate('Produto')}}>
 				<Text style={styles.submitText}>Cadastrar Loja</Text>
 			</TouchableOpacity>
 			</View>

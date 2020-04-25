@@ -1,18 +1,17 @@
 import React, {useState} from 'react';
 import { StyleSheet, KeyboardAvoidingView, View, Image, TextInput, TouchableOpacity, Text} from 'react-native';
 
-export default function App() {
+export default function Produto(props) {
 
 	return (
 		<KeyboardAvoidingView style={styles.back}>
 
 			<View style={styles.logo}>
 			<Image
-			source={require('./assets/produto.png')}
+			source={require('../assets/produto.png')}
 			/>
 			
 			</View>
-			<View style={styles.textInput}><Text >Cadastro de produtos</Text></View>
 
 			<View style={styles.container}>
 				
