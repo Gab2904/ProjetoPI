@@ -8,13 +8,27 @@ export default function Login(props) {
 
 			<View style={styles.logo}>
 			<Image
-			source={require('../assets/down.png')}
+			source={require('../assets/userbussines.png')}
 			/>
 			</View>
 
 			<View style={styles.container}>
 				<TextInput
-				placeholder="Email"
+				placeholder="Email da empresa"
+				autoCorrect={false}
+				onChangeText={()=>{}}
+				style={styles.input}
+				/>
+
+                <TextInput
+				placeholder="CNPJ da empresa"
+				autoCorrect={false}
+				onChangeText={()=>{}}
+				style={styles.input}
+				/>
+
+                <TextInput
+				placeholder="CPF responsável da empresa"
 				autoCorrect={false}
 				onChangeText={()=>{}}
 				style={styles.input}
@@ -28,13 +42,10 @@ export default function Login(props) {
 				/>
 
 			<TouchableOpacity style={styles.btnSubmit} onPress = {() => {props.navigation.navigate('Loja')}}>
-				<Text style={styles.submitText}>Acessar</Text>
+				<Text style={styles.submitText}>Cadastrar</Text>
 				
 			</TouchableOpacity>
 
-			<TouchableOpacity style={styles.btnRegister} onPress = {() => {props.navigation.navigate('CadastroLogin')}}>
-				<Text style={styles.registerText}>CADASTRE-SE</Text>
-			</TouchableOpacity>
 			</View>
 
 		</KeyboardAvoidingView>
@@ -120,6 +131,3 @@ const styles = StyleSheet.create(
 	}
 	
 });
-
-
-

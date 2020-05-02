@@ -4,6 +4,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Login from './telas/Login';
 import Loja  from './telas/Loja';
 import Produto from './telas/Produto';
+import CadastroLogin from './telas/CadastroLogin';
+import Produtos from './telas/Produtos'
 
 const Stack = createStackNavigator();
 
@@ -15,6 +17,10 @@ export default function Router(){
             <Stack.Screen name="Login" component={Login}/>
             <Stack.Screen name="Loja" component={Loja}/>
             <Stack.Screen name="Produto" component={Produto}/>
+            <Stack.Screen name="CadastroLogin" component={CadastroLogin}/>
+            <Stack.Screen name="Produtos" component={Produtos}/>
+
+
 
 
         </Stack.Navigator>

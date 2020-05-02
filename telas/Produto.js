@@ -41,7 +41,7 @@ export default function Produto(props) {
 				style={styles.input}
 				/>
 
-			<TouchableOpacity style={styles.btnSubmit}>
+			<TouchableOpacity style={styles.btnSubmit} onPress = {() => {props.navigation.navigate('Produtos')}}>
 				<Text style={styles.submitText}>Cadastrar Produto</Text>
 			</TouchableOpacity>
 			</View>
