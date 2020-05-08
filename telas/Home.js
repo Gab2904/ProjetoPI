@@ -1,59 +1,24 @@
 import React, {useState} from 'react';
 import { StyleSheet, KeyboardAvoidingView, View, Image, TextInput, TouchableOpacity, Text} from 'react-native';
 
-export default function Loja(props) {
+export default function Login(props) {
 
 	return (
 		<KeyboardAvoidingView style={styles.back}>
 
 			<View style={styles.logo}>
 			<Image
-			source={require('../assets/store.png')}
+			source={require('../assets/cellphone.png')}
 			/>
 			</View>
 
 			<View style={styles.container}>
-				<TextInput
-				placeholder="CNPJ"
-				autoCorrect={false}
-				onChangeText={()=>{}}
-				style={styles.input}
-				/>
-
-			<TextInput
-				placeholder="Razão Social"
-				autoCorrect={false}
-				onChangeText={()=>{}}
-				style={styles.input}
-				/>
-				<TextInput
-				placeholder="Nome Fantasia"
-				autoCorrect={false}
-				onChangeText={()=>{}}
-				style={styles.input}
-				/>
-				<TextInput
-				placeholder="Endereço"
-				autoCorrect={false}
-				onChangeText={()=>{}}
-				style={styles.input}
-				/>
-				<TextInput
-				placeholder="Responsável"
-				autoCorrect={false}
-				onChangeText={()=>{}}
-				style={styles.input}
-				/>
-				<TextInput
-				placeholder="CPF Responsável"
-				autoCorrect={false}
-				onChangeText={()=>{}}
-				style={styles.input}
-				/>
-
-			<TouchableOpacity style={styles.btnSubmit} onPress = {() => {props.navigation.navigate('Produto')}}>
-				<Text style={styles.submitText}>Cadastrar Loja</Text>
+			
+			<TouchableOpacity style={styles.btnSubmit} onPress = {() => {props.navigation.navigate('TelaContato')}}>
+				<Text style={styles.submitText}>Cadastrar e listar contatos</Text>
+				
 			</TouchableOpacity>
+
 			</View>
 
 		</KeyboardAvoidingView>
@@ -70,9 +35,7 @@ const styles = StyleSheet.create(
 		justifyContent: 'center',
 		backgroundColor: '#191919'
 	},
-	btnCadastrar:{
-		paddingTop: 25
-	},
+
 	logo:{
 		flex:1,
 		justifyContent: 'center'
@@ -117,6 +80,3 @@ const styles = StyleSheet.create(
 	}
 	
 });
-
-
-
