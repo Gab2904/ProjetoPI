@@ -6,6 +6,8 @@ import Loja  from './telas/Loja';
 import Produto from './telas/Produto';
 import CadastroLogin from './telas/CadastroLogin';
 import Produtos from './telas/Produtos'
+import Menu from './telas/Menu';
+import DetalheProduto from './telas/DetalheProduto';
 
 const Stack = createStackNavigator();
 
@@ -14,11 +16,14 @@ export default function Router(){
     return(
         <NavigationContainer>
         <Stack.Navigator>
+            <Stack.Screen name="Menu" component={Menu}/>
             <Stack.Screen name="Login" component={Login}/>
             <Stack.Screen name="Loja" component={Loja}/>
             <Stack.Screen name="Produto" component={Produto}/>
             <Stack.Screen name="CadastroLogin" component={CadastroLogin}/>
             <Stack.Screen name="Produtos" component={Produtos}/>
+            <Stack.Screen name="DetalheProduto" component={DetalheProduto}/>
+
 
 
 

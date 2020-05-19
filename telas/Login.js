@@ -32,9 +32,9 @@ export default function Login(props) {
 				
 			</TouchableOpacity>
 
-			<TouchableOpacity style={styles.btnRegister} onPress = {() => {props.navigation.navigate('CadastroLogin')}}>
+			{/* <TouchableOpacity style={styles.btnRegister} onPress = {() => {props.navigation.navigate('CadastroLogin')}}>
 				<Text style={styles.registerText}>CADASTRE-SE</Text>
-			</TouchableOpacity>
+			</TouchableOpacity> */}
 			</View>
 
 		</KeyboardAvoidingView>

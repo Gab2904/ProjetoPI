@@ -10,6 +10,8 @@ export default function Produto(props) {
 			<Image
 			source={require('../assets/produto.png')}
 			/>
+
+			
 			
 			</View>
 
@@ -111,7 +113,17 @@ const styles = StyleSheet.create(
 		fontSize: 20,
 		color: '#FFF',
 		fontWeight:'bold'
-	}
+	},
+
+	text: {
+		marginTop: 65,
+		paddingTop: 15,
+		paddingBottom: 15,
+		paddingLeft: 30,
+		paddingRight: 30,
+		alignItems: 'center'
+	  }
+
 	
 });
 
