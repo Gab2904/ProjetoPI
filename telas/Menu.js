@@ -8,31 +8,21 @@ export default function Menu(props) {
 
 			<View style={styles.container}>
 
-			<TouchableOpacity style={styles.btnSubmit} onPress = {() => {props.navigation.navigate('CadastroLogin')}}>
-				<Text style={styles.submitText}>Novo Usuário</Text>
-				
-			</TouchableOpacity>
+				<Image
+					source={require('../assets/menu.png')}
+				/>
 
-            <TouchableOpacity style={styles.btLogin} onPress = {() => {props.navigation.navigate('Login')}}>
-				<Text style={styles.submitText}>Login</Text>
-				
-			</TouchableOpacity>
+           </View>
+				<TouchableOpacity style={styles.btLogin} onPress = {() => {props.navigation.navigate('Login')}}>
+					<Text style={styles.submitText}>Login</Text>
+					
+				</TouchableOpacity>
 
-            <TouchableOpacity style={styles.btLoja} onPress = {() => {props.navigation.navigate('Loja')}}>
-				<Text style={styles.submitText}>Cadastrar loja</Text>
-				
-			</TouchableOpacity>
-
-            <TouchableOpacity style={styles.BtLoginAdm} onPress = {() => {props.navigation.navigate('')}}>
-				<Text style={styles.submitText}>Login ADM</Text>
-				
-			</TouchableOpacity>
-
-
-
-
-
-			</View>
+				<TouchableOpacity style={styles.BtLoginAdm} onPress = {() => {props.navigation.navigate('LoginADM')}}>
+					<Text style={styles.submitText}>Login ADM</Text>
+					
+				</TouchableOpacity>
+			
 
 		</KeyboardAvoidingView>
 

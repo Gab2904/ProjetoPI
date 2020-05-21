@@ -14,14 +14,14 @@ export default function Login(props) {
 
 			<View style={styles.container}>
 				<TextInput
-				placeholder="Email"
+				placeholder="CNPJ"
 				autoCorrect={false}
 				onChangeText={()=>{}}
 				style={styles.input}
 				/>
 
 			<TextInput
-				placeholder="Senha"
+				placeholder="CPF do responsável"
 				autoCorrect={false}
 				onChangeText={()=>{}}
 				style={styles.input}
@@ -32,7 +32,7 @@ export default function Login(props) {
 				
 			</TouchableOpacity>
 
-			<TouchableOpacity style={styles.btnRegister} onPress = {() => {props.navigation.navigate('CadastroLogin')}}>
+			<TouchableOpacity style={styles.btnRegister} onPress = {() => {props.navigation.navigate('Loja')}}>
 				<Text style={styles.registerText}>CADASTRE-SE</Text>
 			</TouchableOpacity> 
 			</View>

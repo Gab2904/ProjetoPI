@@ -12,16 +12,10 @@ export default function DetalheProduto(){
          style={styles.imagem}
         />
         <View style={styles.descricao}>
-
         <Text style={styles.titulo}>Alcool em Gel</Text>
         <Text style={styles.tituloNome}>Quantidade: 80</Text>
         <Text style={styles.tituloNome}>Preço Unidade: R$ 4,50</Text>
         </View>
-
-        
-       
-
-        
     </View>
 
     

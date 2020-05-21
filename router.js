@@ -5,9 +5,11 @@ import Login from './telas/Login';
 import Loja  from './telas/Loja';
 import Produto from './telas/Produto';
 import CadastroLogin from './telas/CadastroLogin';
-import Produtos from './telas/Produtos'
+import Produtos from './telas/Produtos';
 import Menu from './telas/Menu';
 import DetalheProduto from './telas/DetalheProduto';
+import LoginADM from './telas/LoginADM';
+import { Ionicons } from '@expo/vector-icons';
 
 const Stack = createStackNavigator();
 
@@ -18,16 +20,13 @@ export default function Router(){
         <Stack.Navigator>
             <Stack.Screen name="Menu" component={Menu}/>
             <Stack.Screen name="Login" component={Login}/>
+            <Stack.Screen name="LoginADM" component={LoginADM}/>
             <Stack.Screen name="Loja" component={Loja}/>
             <Stack.Screen name="Produto" component={Produto}/>
             <Stack.Screen name="CadastroLogin" component={CadastroLogin}/>
-            <Stack.Screen name="Produtos" component={Produtos}/>
+            <Stack.Screen name="Produtos" component={Produtos } />
+            
             <Stack.Screen name="DetalheProduto" component={DetalheProduto}/>
-
-
-
-
-
         </Stack.Navigator>
     </NavigationContainer>
     )

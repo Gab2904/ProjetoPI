@@ -41,7 +41,7 @@ export default function Login(props) {
 				style={styles.input}
 				/>
 
-			<TouchableOpacity style={styles.btnSubmit} onPress = {() => {props.navigation.navigate('Loja')}}>
+			<TouchableOpacity style={styles.btnSubmit} onPress = {() => {props.navigation.navigate('Menu')}}>
 				<Text style={styles.submitText}>Cadastrar</Text>
 				
 			</TouchableOpacity>

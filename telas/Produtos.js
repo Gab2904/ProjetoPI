@@ -1,28 +1,65 @@
-import React from 'react';
-import {Text,View, Image, StyleSheet, TextInput, Button, Alert, ScrollView,TouchableOpacity} from 'react-native';
+import React, {useState} from 'react';
+import {Text,View, Image, StyleSheet, TextInput, Button, Alert, ScrollView,TouchableOpacity, SafeAreaView, StatusBar} from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 
 
-
-export default function Produtos(){
+export default function Produtos(props){
     return (
-    <View style={styles.container}>
-        <Image
+
+<SafeAreaView style={styles.container}>
+
+<Image
         source={require('../assets/alcool.png')}
          style={styles.imagem}
         />
-        <View style={styles.descricao}>
+   
+<View style={styles.descricao}>
 
-        <Text style={styles.titulo}>Alcool em Gel</Text>
-        <Text style={styles.tituloNome}>Quantidade: 80</Text>
-        <Text style={styles.tituloNome}>Preço Unidade: R$ 4,50</Text>
-        </View>
-
+      <Text style={styles.titulo}>Alcool em Gel</Text>
+         <Text style={styles.tituloNome}>Quantidade: 80</Text>
+      <Text style={styles.tituloNome}>Preço Unidade: R$ 4,50</Text>
         
        
+       </View>
+
+       <TouchableOpacity style={styles.icon} onPress = {() => {props.navigation.navigate('Produto')}}>
+        <Ionicons
+          name="ios-add" size={35} color="black"
+          
+        /> 
+		</TouchableOpacity>
+
+
+</SafeAreaView>
+
+//     <View style={styles.container}>
+//         <Image
+//         source={require('../assets/alcool.png')}
+//          style={styles.imagem}
+//         />
+//         <View style={styles.descricao}>
+
+//         <Text style={styles.titulo}>Alcool em Gel</Text>
+//         <Text style={styles.tituloNome}>Quantidade: 80</Text>
+//         <Text style={styles.tituloNome}>Preço Unidade: R$ 4,50</Text>
+        
+       
+//         </View>
 
         
-    </View>
+// <View>
+// <TouchableOpacity style={styles.icon} onPress = {() => {props.navigation.navigate('Produto')}}>
+//         <Ionicons
+//           name="ios-add" size={35} color="black"
+          
+//         /> 
+// 		</TouchableOpacity>
+// </View>
+                
+//     </View>
+
+    
 
     
     )
@@ -37,7 +74,8 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         marginBottom: 10,
         flexDirection: 'row',
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        flex: 1
     },
 
     imagem:{
@@ -58,6 +96,28 @@ const styles = StyleSheet.create({
     },
     tituloNome:{
         color: 'gray'
+    },
+    
+    icon:{
+        position: 'absolute',
+        width: 60,
+        height: 60,
+        backgroundColor: '#0094FF',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 30,
+        right: 25,
+        bottom: 25,
+        elevation: 2,
+        zIndex: 9,
+        shadowColor: 'black',
+        shadowOpacity: 0.2,
+        textShadowOffset:{
+            width: 1,
+            height: 3
+        }
+
+        
     }
 })
 
